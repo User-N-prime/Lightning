@@ -45,10 +45,11 @@ void draw() {
     if (frameCount > 120) {
       float centerX = width/2;
       float centerY = height/2;
-      image(img, centerX - img.width/2, centerY - img.height/2, fadeEffect);
+      tint(255, fadeEffect);
+      image(img, centerX - img.width/2, centerY - img.height/2);
     }
 
-    // Display the text
+    // display text
     fill(0);
     textSize(16);
     text("you have incurred FEAR, precursor to all of man's wrath. endure.", 0, 15);
