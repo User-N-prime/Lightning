@@ -45,7 +45,7 @@ void draw() {
     if (frameCount > 120) {
       float centerX = width/2;
       float centerY = height/2;
-      image(img, centerX - img.width/2, centerY - img.height/2, 199, 310);
+      image(img, centerX - 199/2, centerY - 310/2, 199, 310);
     }
 
     // display text
