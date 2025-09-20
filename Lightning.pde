@@ -5,9 +5,8 @@ float fadeEffect = 0;
 int leftClicks = 0;
 int rightClicks = 0;
 
+int myframeCount = 0;
 boolean lightTrig = false;
-if (lightTrig = true)
-  int myframeCount = 0;
 
 void setup() {
   // goated kendrick
@@ -22,8 +21,8 @@ void setup() {
 }
 
 void draw() {
-  myframeCount++;
   if (lightTrig == true) {
+    myframeCount++;
     // makes fade effect
     fadeEffect += 1;
     fadeEffect = constrain(fadeEffect, 0, 255);
