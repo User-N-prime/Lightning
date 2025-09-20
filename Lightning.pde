@@ -45,7 +45,7 @@ void draw() {
     rect(0, 0, 600, 700);
 
     // goated kendrick
-    if (myframeCount > 120) {
+    if (myframeCount > 40) {
       float centerX = width/2;
       float centerY = height/2;
       image(img, centerX - 199/2, centerY - 310/2, 199, 310);
