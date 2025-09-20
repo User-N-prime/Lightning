@@ -20,7 +20,7 @@ void setup() {
 
 void draw() {
   if (lightTrig == true) {
-    // makes fade effect (rect method too finicky)
+    // makes fade effect
     fadeEffect += 1;
     fadeEffect = constrain(fadeEffect, 0, 255);
 
@@ -42,9 +42,11 @@ void draw() {
     rect(0, 0, 600, 700);
 
     // goated kendrick
-    float centerX = width/2;
-    float centerY = height/2;
-    image(img, centerX - img.width/2, centerY - img.height/2);
+    if (frameCount > 120) {
+      float centerX = width/2;
+      float centerY = height/2;
+      image(img, centerX - img.width/2, centerY - img.height/2, fadeEffect);
+    }
 
     // Display the text
     fill(0);
