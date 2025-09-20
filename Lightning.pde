@@ -45,7 +45,7 @@ void draw() {
     if (frameCount > 120) {
       float centerX = width/2;
       float centerY = height/2;
-      tint(255, fadeEffect);
+      tint(255, constrain(fadeEffect, 0, 255));
       image(img, centerX - img.width/2, centerY - img.height/2);
     }
 
