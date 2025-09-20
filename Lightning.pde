@@ -1,10 +1,13 @@
 int x = 0;
 int y = 0;
 int z = 0;
-boolean lightTrig = false;
 float fadeEffect = 0;
 int leftClicks = 0;
 int rightClicks = 0;
+
+boolean lightTrig = false;
+if (lightTrig = true)
+  int myframeCount = 0;
 
 void setup() {
   // goated kendrick
@@ -19,6 +22,7 @@ void setup() {
 }
 
 void draw() {
+  myframeCount++;
   if (lightTrig == true) {
     // makes fade effect
     fadeEffect += 1;
@@ -42,7 +46,7 @@ void draw() {
     rect(0, 0, 600, 700);
 
     // goated kendrick
-    if (frameCount > 120) {
+    if (myframeCount > 120) {
       float centerX = width/2;
       float centerY = height/2;
       image(img, centerX - 199/2, centerY - 310/2, 199, 310);
@@ -56,7 +60,7 @@ void draw() {
 }
 
 void mousePressed() {
-  if (Math.random() * 50 > 1) {
+  if (Math.random() * 150 > 1) {
     if (lightTrig == false) {
       if (mouseButton == LEFT) {
         leftClicks++;
