@@ -7,6 +7,7 @@ int rightClicks = 0;
 
 int myframeCount = 0;
 boolean lightTrig = false;
+boolean win = false;
 
 void setup() {
   // goated kendrick
@@ -21,7 +22,7 @@ void setup() {
 }
 
 void draw() {
-  if (lightTrig == true) {
+  if (lightTrig) {
     myframeCount++;
     // makes fade effect
     fadeEffect += 1;
@@ -31,8 +32,8 @@ void draw() {
     int lightStartX = (int)(random(600));
     int lightStartY = 0;
     for (int i = 100; i >= 1; i -= 5) {
-      int lightChangeX = (int)(random(18) - 9);
-      int lightChangeY = (int)(random(8) + 9);
+      int lightChangeX = (int)(Math.random() * 18 - 9);
+      int lightChangeY = (int)(Math.random() * 8 + 9);
       strokeWeight(i / 20);
       stroke(255, 255, 255, i);
       line(lightStartX, lightStartY, lightStartX + lightChangeX, lightStartY + lightChangeY);
@@ -56,6 +57,17 @@ void draw() {
     textSize(16);
     text("you have incurred FEAR, precursor to all of man's wrath. endure.", 0, 15);
   }
+  if (win) {
+    // applies the fade
+    fill(255, 255, 255, fadeEffect);
+    rect(0, 0, 600, 700);
+
+    fill(0);
+    textSize(20);
+    text("YOU WON! Phoenix is now finally happy!", 0, 15);
+    text("But perhaps you are dissatisfied. Try again?", 0, 40);
+    exit();
+  }
 }
 
 void mousePressed() {
@@ -77,7 +89,7 @@ void mousePressed() {
         }
           
         fill(255);
-        rect(0, width - 50, 250, 50);
+        rect(0, width - 50, 275, 50);
         if (leftClicks < 30) {
           fill(0);
           textSize(20);
@@ -102,6 +114,7 @@ void mousePressed() {
           fill(0);
           textSize(20);
           text("Current Emotion: HAPPY!", 10, height - 17);
+          win = true;
         }
       }
       
