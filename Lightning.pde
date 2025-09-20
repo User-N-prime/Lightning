@@ -8,7 +8,7 @@ int rightClicks = 0;
 
 void setup() {
   // goated kendrick
-  img = loadImage("https://raw.githubusercontent.com/User-N-prime/Lightning/refs/heads/master/Kendrick.jpg");
+  img = loadImage("Kendrick.jpg");
 
   size(600, 600);
   background(91, 175, 178);
@@ -45,8 +45,7 @@ void draw() {
     if (frameCount > 120) {
       float centerX = width/2;
       float centerY = height/2;
-      tint(255, constrain(fadeEffect, 0, 255));
-      image(img, centerX - img.width/2, centerY - img.height/2);
+      image(img, centerX - img.width/2, centerY - img.height/2, 199, 310);
     }
 
     // display text
