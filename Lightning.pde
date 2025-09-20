@@ -72,7 +72,6 @@ void draw() {
       textSize(20);
       text("YOU WON! Phoenix is now finally happy!", 5, 20);
       text("But perhaps you are dissatisfied. Try again?", 5, 45);
-      exit();
     }
   }
 }
