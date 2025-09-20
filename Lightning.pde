@@ -70,8 +70,8 @@ void draw() {
     if (myframeCount > 40) {
       fill(0);
       textSize(20);
-      text("YOU WON! Phoenix is now finally happy!", 0, 15);
-      text("But perhaps you are dissatisfied. Try again?", 0, 40);
+      text("YOU WON! Phoenix is now finally happy!", 5, 20);
+      text("But perhaps you are dissatisfied. Try again?", 5, 45);
       exit();
     }
   }
