@@ -58,15 +58,22 @@ void draw() {
     text("you have incurred FEAR, precursor to all of man's wrath. endure.", 0, 15);
   }
   if (win) {
+    myframeCount++;
+    // makes fade effect
+    fadeEffect += 1;
+    fadeEffect = constrain(fadeEffect, 0, 255);
+
     // applies the fade
     fill(255, 255, 255, fadeEffect);
     rect(0, 0, 600, 700);
 
-    fill(0);
-    textSize(20);
-    text("YOU WON! Phoenix is now finally happy!", 0, 15);
-    text("But perhaps you are dissatisfied. Try again?", 0, 40);
-    exit();
+    if (myframeCount > 40) {
+      fill(0);
+      textSize(20);
+      text("YOU WON! Phoenix is now finally happy!", 0, 15);
+      text("But perhaps you are dissatisfied. Try again?", 0, 40);
+      exit();
+    }
   }
 }
 
