@@ -29,7 +29,7 @@ void draw() {
     fadeEffect = constrain(fadeEffect, 0, 255);
 
     // cool lightning
-    int lightStartX = (int)(random(600));
+    int lightStartX = (int)(Math.random() * 600);
     int lightStartY = 0;
     for (int i = 100; i >= 1; i -= 5) {
       int lightChangeX = (int)(Math.random() * 18 - 9);
